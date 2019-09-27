@@ -185,4 +185,30 @@ public class SortAlgorithms {
         }
         return array;
     }
+
+    /**
+     * Bubble sort method
+     * Best - O(n)
+     * Middle - O(n^2)
+     * Worse - O(n^2)
+     *
+     * @param array Unsorted array of int values
+     * @return sorted array
+     */
+    public static int[] bubbleSort(int[] array){
+        boolean isSorted = false;
+        int tmp;
+        while (!isSorted){
+            isSorted = true;
+            for(int i = 0; i < array.length-1; i++){
+                if (array[i] > array [i+1]) {
+                    tmp = array[i];
+                    array[i] = array[i+1];
+                    array[i+1] = tmp;
+                    isSorted = false;
+                }
+            }
+        }
+        return array;
+    }
 }
